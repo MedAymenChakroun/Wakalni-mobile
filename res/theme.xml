@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resource majorVersion="1" minorVersion="11" useXmlUI="false">
+    <image name="Image 1"  />
+    <image name="restaurant-le-47.jpg"  />
+    <theme name="Theme">
+        <val key="@includeNativeBool" value="true" />
+    </theme>
+</resource>
