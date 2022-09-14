@@ -121,5 +121,42 @@ public class ServicePanier {
         NetworkManager.getInstance().addToQueueAndWait(req1);
         return result;
     }
+     public void sendMail(User u ,Resources res) {
+        try {
 
-}
+            Properties props = new Properties();
+          props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.host", "mail.mydomain.com");
+        props.put("mail.smtp.debug", "true");
+        props.put("mail.smtp.port", "587");
+
+            Session session = Session.getInstance(props, null); // aleh 9rahach 5ater mazlna masabinach javax.mail .jar
+
+            MimeMessage msg = new MimeMessage(session);
+
+            msg.setFrom(new InternetAddress("Commande <monEmail@domaine.com>"));
+            msg.setRecipients(Message.RecipientType.TO, u.getEmail());
+            msg.setSubject("Votre commande a eté crée !");
+            msg.setSentDate(new Date(System.currentTimeMillis()));
+
+            SessionManager.setCode(ServiceUser.getInstance().Random6Digits());
+            
+            String txt = "Welcome to WAKALNI , votre commande a ete crée avec succés";
+
+            msg.setText(txt);
+            
+
+            SMTPTransport st = (SMTPTransport) session.getTransport("smtps");
+
+            st.connect("smtp.gmail.com", 587, "ahmed.rahal@esprit.tn", "213JMT3199");
+
+            st.sendMessage(msg, msg.getAllRecipients());
+
+            System.out.println("server response : " + st.getLastServerResponse());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+}}

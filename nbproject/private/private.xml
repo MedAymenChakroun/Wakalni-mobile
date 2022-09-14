@@ -3,6 +3,42 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/StatsForm.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/ReclamationAddForm.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/statics/statics.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/WalkthruForm.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/ProductCatalogue.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/entities/Panier.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/entities/Produit.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/SideMenuBaseForm.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/ForgotPasswordResetForm.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/services/ServicePanier.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/entities/Reclamation.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/LoginForm.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/services/ServiceReview.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/entities/User.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/LivraisonForm.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/ReviewAddForm.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/ReviewForm.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/ForgotPasswordEmailForm.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/ProfileForm.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/SignupForm.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/PanierCatalogue.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/entities/Commande.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/services/OrganisationService.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/services/ServiceCommande.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/services/ServiceLivraison.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/MyApplication.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/services/ServiceProduit.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/ForgotPasswordCodeForm.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/OrganisationListForm.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/entities/Review.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/services/ServiceUser.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/entities/Leftovers.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/ReclamationForm.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/entities/Organisation.java</file>
+            <file>file:/C:/Users/GAMING/Desktop/mobile/Wakalni-mobile/src/com/mycompany/wakalni/LeftoversListForm.java</file>
+        </group>
     </open-files>
 </project-private>

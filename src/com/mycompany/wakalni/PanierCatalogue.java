@@ -5,9 +5,11 @@
  */
 package com.mycompany.wakalni;
 
+import com.codename1.messaging.Message;
 import com.codename1.ui.Button;
 import static com.codename1.ui.Component.RIGHT;
 import com.codename1.ui.Container;
+import com.codename1.ui.Display;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
@@ -20,7 +22,10 @@ import com.codename1.ui.util.Resources;
 import com.mycompany.entities.Commande;
 import com.mycompany.entities.Panier;
 import com.mycompany.entities.Produit;
+import com.mycompany.entities.User;
 import com.mycompany.services.ServiceCommande;
+import com.mycompany.services.ServiceUser;
+
 import com.mycompany.services.ServicePanier;
 import com.mycompany.services.ServiceProduit;
 
@@ -34,8 +39,10 @@ import java.util.ArrayList;
 public class PanierCatalogue extends SideMenuBaseForm {
     public PanierCatalogue(Resources res) {
         
+        
         super(BoxLayout.y());
         setUIID("LoginForm");
+         
        
         //u = ServiceUser.getInstance().getCurrent(SessionManager.getId());
         Toolbar tb = getToolbar();
@@ -45,6 +52,7 @@ public class PanierCatalogue extends SideMenuBaseForm {
         profilePic = profilePic.fill(mask.getWidth(), mask.getHeight());
         Label profilePicLabel = new Label(profilePic, "ProfilePicTitle");
         profilePicLabel.setMask(mask.createMask());
+        
 
         Button menuButton = new Button("");
         menuButton.setUIID("Title");
@@ -56,6 +64,7 @@ public class PanierCatalogue extends SideMenuBaseForm {
                 BorderLayout.centerAbsolute(
                         BoxLayout.encloseY(
                                 new Label("", "Title"),
+                                new Label("Panier", "TodayTitle"),
                                 new Label("", "SubTitle")
                         )
                 ).add(BorderLayout.WEST, profilePicLabel)
@@ -63,16 +72,17 @@ public class PanierCatalogue extends SideMenuBaseForm {
 
         tb.setTitleComponent(titleCmp);
 
-        add(new Label("Panier", "TodayTitle"));
+ 
 
        ArrayList<Panier> panier = new ArrayList<>();
        panier = ServicePanier.getInstance().affichagePanier();
        Container by = null;
        for(Panier q : panier){
           
-           Label nom = new Label(String.valueOf(q.getQuantite()));
+                    Label nom = new Label(String.valueOf(q.getQuantite()));
            Label type = new Label(String.valueOf(q.getNom()));
            Label firstname = new Label(String.valueOf(q.getPrix()));
+
            Label dureeIcon = new Label("", "TextField");
            Label questionIcon = new Label("","TextField");
            Label reponseIcon = new Label("","TextField");
@@ -86,14 +96,21 @@ public class PanierCatalogue extends SideMenuBaseForm {
            FontImage.setMaterialIcon(questionIcon, FontImage.MATERIAL_QUESTION_ANSWER, 3);
            FontImage.setMaterialIcon(reponseIcon, FontImage.MATERIAL_VERIFIED, 3);
            FontImage.setMaterialIcon(promoIcon, FontImage.MATERIAL_MONETIZATION_ON, 3);
-            Button validate = new Button("validate");
+            Button validate = new Button("Commander");
            validate.addActionListener(e->{
                //Panier pm= new Panier(q.getProduitid(),q.getCrid(),1);
-               ServiceCommande.getInstance().ajouterCommande(new Commande(q.getPanierid(),SessionManager.getId()));
+               ServiceCommande.getInstance().ajouterCommande(new Commande(q.getPanierid(),SessionManager.getId()));   
+            User X = new User();
+             X = ServiceUser.getInstance().getCurrent(SessionManager.getId());
+             //System.out.println("aaaaa"+X.getEmail());
+
+           
+            ServiceUser.getInstance().sendMail(X, res);
+
            });
        
             by = BoxLayout.encloseXCenter(
-                BoxLayout.encloseYCenter(
+                BoxLayout.encloseXCenter(
                 BorderLayout.center(nom).
                 add(BorderLayout.WEST, questionIcon),
                 BorderLayout.center(type).
@@ -106,7 +123,7 @@ public class PanierCatalogue extends SideMenuBaseForm {
       
         add(by);
        }        setupSideMenu(res);
-
+       
     }
 
 }
