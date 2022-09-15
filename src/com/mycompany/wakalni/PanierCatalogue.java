@@ -7,6 +7,7 @@ package com.mycompany.wakalni;
 
 import com.codename1.messaging.Message;
 import com.codename1.ui.Button;
+import static com.codename1.ui.CN.sendSMS;
 import static com.codename1.ui.Component.RIGHT;
 import com.codename1.ui.Container;
 import com.codename1.ui.Display;
@@ -28,6 +29,7 @@ import com.mycompany.services.ServiceUser;
 
 import com.mycompany.services.ServicePanier;
 import com.mycompany.services.ServiceProduit;
+
 
 import com.mycompany.services.ServiceUser;
 import java.util.ArrayList;
@@ -102,10 +104,11 @@ public class PanierCatalogue extends SideMenuBaseForm {
                ServiceCommande.getInstance().ajouterCommande(new Commande(q.getPanierid(),SessionManager.getId()));   
             User X = new User();
              X = ServiceUser.getInstance().getCurrent(SessionManager.getId());
-             //System.out.println("aaaaa"+X.getEmail());
-
+            String aa= X.getEmail().toString();
+             System.out.println("xxxxx"+aa);
+             ServiceProduit.send();
            
-            ServiceUser.getInstance().sendMail(X, res);
+           // ServiceUser.getInstance().sendMail(X, res);
 
            });
        
