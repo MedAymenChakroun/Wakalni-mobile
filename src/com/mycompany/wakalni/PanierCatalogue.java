@@ -106,7 +106,7 @@ public class PanierCatalogue extends SideMenuBaseForm {
              X = ServiceUser.getInstance().getCurrent(SessionManager.getId());
             String aa= X.getEmail().toString();
              System.out.println("xxxxx"+aa);
-             ServiceProduit.send();
+             ServicePanier.send();
            
            // ServiceUser.getInstance().sendMail(X, res);
 

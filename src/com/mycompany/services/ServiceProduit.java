@@ -120,18 +120,6 @@ public class ServiceProduit {
         NetworkManager.getInstance().addToQueueAndWait(req1);
         return result;
     }
-     public static void send() {
-         User X = new User();
-         X = ServiceUser.getInstance().getCurrent(SessionManager.getId());
-        Twilio.init("ACee94fc9fb1362071ee48da04710324ef", "dc0f6d05e01a50abcecff12b7c06d7a9");
-        com.twilio.rest.api.v2010.account.Message message = com.twilio.rest.api.v2010.account.Message.creator(
-        // new com.twilio.type.PhoneNumber("X.getPhonenumber().toString()"),               
-                new com.twilio.type.PhoneNumber("+21656564456"),               
-                new com.twilio.type.PhoneNumber("+19786794809"),
-               "Mr/Mme "+X.getFirstname() +" Votre commande a été crée !")
-            .create();
 
-        System.out.println(message.getSid());
-    }
 
 }
